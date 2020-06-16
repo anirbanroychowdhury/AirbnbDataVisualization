@@ -1,0 +1,83 @@
+html, body { height: 100%; width: 100% }
+
+/*
+* {
+color: antiquewhite;
+}
+*/
+
+body {
+    background: #121212;
+    padding: 20px;
+}
+
+p, h1 {
+    color: antiquewhite;
+}
+
+div{
+    padding: 20px;
+}
+
+svg {
+    display: inline-block;
+
+}
+
+.axis text{
+    fill: antiquewhite;
+}
+
+.axis path{
+    fill: antiquewhite;
+}
+
+.tooltip {   
+    position: absolute;           
+    text-align: center;           
+    width: 150px;                  
+    height: 125px;                 
+    padding: 2px;
+    color: antiquewhite;
+    font: 12px sans-serif;        
+    background: grey;   
+    border: 0px;      
+    border-radius: 8px;           
+    pointer-events: none;
+
+}
+
+#graphs {
+    /*    display: flex;*/
+}
+
+
+#intro {
+    width: 100vw;
+    overflow: hidden;
+}
+
+#intro-text {
+    width: 40vw;
+    float: left;
+}
+
+#intro-img {
+    /*    width: calc(100% - 500px);*/
+    width: 50vw;
+    float: right;
+}
+
+#numerical-graph {
+    width: 100vw;
+    overflow: hidden;
+}
+
+#scatterplot {
+    width: 40vw;
+    float: left;
+}
+#histogram {
+    width: 50vw;
+    float: right;
+}

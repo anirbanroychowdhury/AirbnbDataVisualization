@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Airbnb Visualization - 30539676</title>
+    </head>
+    <body id="body">
+        <div class="container">
+            <nav class="navbar navbar-dark bg-dark sticky-top">
+                <a class="navbar-brand" href="#">Navbar</a>
+            </nav>
+        </div>
+        <h1>Airbnb Visualization - Price Exploration</h1>
+        <div id="intro">
+            <div id="intro-text" >
+                <p>
+                    Airbnb is an online marketplace that connects people who want to rent out their homes with
+                    people who are looking for accommodations in that locale. It is currently available in more
+                    than 81000 cities and 191 countries worldwide and is a viable option for visitors as it helps
+                    them connect and stay with the locals at a reasonable price.<br>
+                    Staying in an Airbnb offers a lot of advantages over traditional hotels for prospective
+                    travellers to that locale. Airbnb are on an average cheaper than some of the high tier
+                    traditional hotels, while offering amenities of the same level.<br>
+                    Airbnb also provides an opportunity to travellers to experience and understand the local
+                    culture better though their Airbnb hosts, who are often locals themselves.<br>
+                    Throughout this project a central question has been what are the factors effecting the price of a listing.
+                    Through using the techniques learned in the unit we have narrowed it down to a few facotrs which you will be seeing further below.<br>
+                    The correlation matrix allows you to see the correlation between the different attributes available to us in teh dataset.
+                    Click on a cell if allow you to do a more indepth analysis of the attributes and their relation.
+                </p>
+            </div>
+            <div id="intro-img">
+                <img src="airbnb_logo.png">
+            </div>
+        </div>
+        <div id="graphs">
+            <div id="correlation-matrix">
+                <div id="heatmap"></div>
+            </div>
+            <div id="numerical-graph">
+                <div id="scatterplot"></div>
+                <div id="histogram">
+                    <input type="number" min="1" max="50" step="20" value="5" id="nBin">
+                </div>
+            </div>
+        </div>
+        <script src="js/histogram.js"></script>
+        
+        <script src="js/scatterplot.js"></script>
+<script src="js/heatmap.js"></script>        
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
+<!--
+TODO:
+
+1.DECIDE IF YOU WANT TO TRIM MORE VARIABLES. USE CODE IN JUPYTER NOTEBOOK, ATTRIBUTES SUCH AS REVIEWS, AVAILABILITY 360
+2.ADD AREA TO HIGHLIGHT SELECTED VARIABLES FROM HEATMAP.
+3.SET UP THE CSS AND HTML LAYOUT
+
+
+-->
