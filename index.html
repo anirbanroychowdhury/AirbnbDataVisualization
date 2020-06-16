@@ -45,18 +45,42 @@
         <div id="graphs">
             <div id="correlation-matrix">
                 <div id="heatmap"></div>
+                <div>
+                    <h2>
+                        Correlation Matrix
+                    </h2>
+                    <p>
+                        A correlation matrix is a table showing correlation coefficients between variables. Each cell in the table shows the correlation between two variables. By hovering over the celss we can see the correlation value between the attributes.
+                    </p>
+                </div>
             </div>
             <div id="numerical-graph">
                 <div id="scatterplot"></div>
+                <div>
+                    <h2>Scatter Plot:</h2>
+                    <p>
+                        We use this plot to determine if there is any type of relation between our selected attributes.
+                        For a few attributes we might see a linear, exponential or logarithmic relation between the data of our attributes.
+                        Hovering over a point gives us the x and y value of the point.
+                    </p>
+                </div>
                 <div id="histogram">
-                    <input type="number" min="1" max="50" step="20" value="5" id="nBin">
+                    <input type="number" min="1" max="150" step="20" value="5" id="nBin">
+                </div>
+                <div>
+                    <h2>Histogram:</h2>
+                    <p>
+                        We use this diagram to get a better understanding of the distribution of our data. We can get a quick overview of how our
+                        data is segregated among different ranges. We can change the bin size using the provided input box.
+                        Hovering over the bar gives us the tid-bits about the selected range.
+                    </p>
                 </div>
             </div>
         </div>
         <script src="js/histogram.js"></script>
-        
+
         <script src="js/scatterplot.js"></script>
-<script src="js/heatmap.js"></script>        
+        <script src="js/heatmap.js"></script>        
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -68,9 +92,9 @@
 <!--
 TODO:
 
-1.DECIDE IF YOU WANT TO TRIM MORE VARIABLES. USE CODE IN JUPYTER NOTEBOOK, ATTRIBUTES SUCH AS REVIEWS, AVAILABILITY 360
-2.ADD AREA TO HIGHLIGHT SELECTED VARIABLES FROM HEATMAP.
-3.SET UP THE CSS AND HTML LAYOUT
+3. ADD MAP CHART MAYBE?
+4.ADD CHART DESCRIPTION.
+5. Add area for selected attributes near the correlation matrix.
 
 
 -->

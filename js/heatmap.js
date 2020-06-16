@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
     var margin = {top: 50, right: 25, bottom: 80, left: 170},
-width = 1400 - margin.left - margin.right - 100,
-height = 790 - margin.top - margin.bottom - 100;
+width = 950 - margin.left - margin.right - 100,
+height = 700 - margin.top - margin.bottom - 100;
 
 // append the svg object to the body of the page
 var svg_heatmap = d3.select("#heatmap")

@@ -11,7 +11,7 @@ body {
     padding: 20px;
 }
 
-p, h1 {
+p, h1,h2,h3,h4 {
     color: antiquewhite;
 }
 
@@ -48,7 +48,8 @@ svg {
 }
 
 #graphs {
-    /*    display: flex;*/
+        display: flex;
+    flex-direction: column;
 }
 
 
@@ -68,11 +69,19 @@ svg {
     float: right;
 }
 
-#numerical-graph {
-    width: 100vw;
-    overflow: hidden;
+#correlation-matrix {
+    display: inherit;
 }
 
+#numerical-graph {
+/*
+    width: 100vw;
+    overflow: hidden;
+*/
+    display: inherit;
+}
+
+/*
 #scatterplot {
     width: 40vw;
     float: left;
@@ -80,4 +89,4 @@ svg {
 #histogram {
     width: 50vw;
     float: right;
-}
+}*/

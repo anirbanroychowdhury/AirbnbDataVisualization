@@ -27,7 +27,9 @@ d3.csv("cleaned_boston_data.csv", function(data) {
 
         //initial attributes
         var x_attr_hist = "cleaning_fee";
+        var x_attr_hist_temp = "";
         var y_attr_hist = "price";
+        var y_attr_hist_temp = "";
         var y_scale_min = Math.min.apply(null, data.map(function(obj) { return obj[y_attr_hist]; }));
         var y_scale_max = Math.max.apply(null,data.map(function(obj) { return obj[y_attr_hist]; }));
 
@@ -86,8 +88,8 @@ d3.csv("cleaned_boston_data.csv", function(data) {
 
 
         function update_hist(x_attr_hist,y_attr_hist,nBin){
-
-            update_scales_histogram(x_attr_hist,y_attr_hist);
+            x_attr_hist_temp=x_attr_hist;
+            y_attr_hist_temp=y_attr_hist; update_scales_histogram(x_attr_hist,y_attr_hist);
 
             // set the parameters for the histogram
             var histogram = d3.histogram()
@@ -138,7 +140,7 @@ d3.csv("cleaned_boston_data.csv", function(data) {
         update_hist(x_attr_hist,y_attr_hist,5);
         //change value from input bar
         d3.select("#nBin").on("input",function(){
-            update_hist(x_attr_hist,y_attr_hist,+this.value);
+            update_hist(x_attr_hist_temp,y_attr_hist_temp,+this.value);
         })
         //return packaged function
         return {
