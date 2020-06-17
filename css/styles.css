@@ -1,11 +1,5 @@
 html, body { height: 100%; width: 100% }
 
-/*
-* {
-color: antiquewhite;
-}
-*/
-
 body {
     background: #121212;
     padding: 20px;
@@ -15,8 +9,12 @@ p, h1,h2,h3,h4 {
     color: antiquewhite;
 }
 
+h1,h2,h3,h4 {
+    text-align: center;
+}
+
 div{
-    padding: 5px;
+    padding: 10px;
 }
 
 svg {
@@ -54,19 +52,8 @@ svg {
 
 
 #intro {
-    width: 100vw;
-    overflow: hidden;
-}
 
-#intro-text {
-    width: 40vw;
-    float: left;
-}
-
-#intro-img {
-    /*    width: calc(100% - 500px);*/
-    width: 50vw;
-    float: right;
+    display: flex;
 }
 
 #correlation-matrix {
@@ -74,19 +61,13 @@ svg {
 }
 
 #numerical-graph {
-/*
-    width: 100vw;
-    overflow: hidden;
-*/
+
     display: inherit;
 }
 
-/*
-#scatterplot {
-    width: 40vw;
-    float: left;
+#airbnb-logo {
+  display: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
-#histogram {
-    width: 50vw;
-    float: right;
-}*/

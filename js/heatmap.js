@@ -29,7 +29,7 @@ var tooltip_heatmap = d3.select("body")
 
 //Read the data
 //d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv", function(data) {
-d3.csv("reformatted_heatmap_data.csv", function(data) {
+d3.csv("data/reformatted_heatmap_data.csv", function(data) {
 
 
     // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'

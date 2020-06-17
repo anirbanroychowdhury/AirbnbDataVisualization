@@ -2,7 +2,7 @@
 
 
 //Read the data
-d3.csv("cleaned_boston_data.csv", function(data) { 
+d3.csv("data/cleaned_boston_data.csv", function(data) { 
 
 
     //add to package renderer for scatterplot

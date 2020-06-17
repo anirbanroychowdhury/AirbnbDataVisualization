@@ -7,16 +7,18 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+        <!--        D3 -->
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
 
-        <title>Airbnb Visualization - 30539676</title>
+        <title>Airbnb Visualization - Anirban Roy Chowdhury - 30539676</title>
+        <script src="data/geoJSON.json"></script>
+        <script src="data/listing.json"></script>
     </head>
     <body id="body">
         <div class="container">
             <nav class="navbar navbar-dark bg-dark sticky-top">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Airbnb Visualization - Anirban Roy Chowdhury - 30539676</a>
             </nav>
         </div>
         <h1>Airbnb Visualization - Price Exploration</h1>
@@ -26,21 +28,21 @@
                     Airbnb is an online marketplace that connects people who want to rent out their homes with
                     people who are looking for accommodations in that locale. It is currently available in more
                     than 81000 cities and 191 countries worldwide and is a viable option for visitors as it helps
-                    them connect and stay with the locals at a reasonable price.<br>
+                    them connect and stay with the locals at a reasonable price.
                     Staying in an Airbnb offers a lot of advantages over traditional hotels for prospective
                     travellers to that locale. Airbnb are on an average cheaper than some of the high tier
-                    traditional hotels, while offering amenities of the same level.<br>
+                    traditional hotels, while offering amenities of the same level.
                     Airbnb also provides an opportunity to travellers to experience and understand the local
                     culture better though their Airbnb hosts, who are often locals themselves.<br>
                     Throughout this project a central question has been what are the factors effecting the price of a listing.
-                    Through using the techniques learned in the unit we have narrowed it down to a few facotrs which you will be seeing further below.<br>
+                    Through using the techniques learned in the unit we have narrowed it down to a few facotrs which you will be seeing further below.
                     The correlation matrix allows you to see the correlation between the different attributes available to us in teh dataset.
-                    Click on a cell if allow you to do a more indepth analysis of the attributes and their relation.
+                    Click on a cell if allow you to do a more indepth analysis of the attributes and their relation.<br>
+                    <br>
+                    The map shown is a map of Boston Neighbourhood with all the listing available on the dataset overalid on it. As we can see at a glance, <u>Airbnb business is booming.</u>
                 </p>
             </div>
-            <div id="intro-img">
-                <img src="airbnb_logo.png">
-            </div>
+            <div id="map"></div>
         </div>
         <div id="graphs">
             <div id="correlation-matrix">
@@ -50,7 +52,10 @@
                         Correlation Matrix
                     </h2>
                     <p>
-                        A correlation matrix is a table showing correlation coefficients between variables. Each cell in the table shows the correlation between two variables. By hovering over the celss we can see the correlation value between the attributes.
+                        A correlation matrix is a table showing correlation coefficients between variables. Each cell in the table shows the correlation between the two variables. <br><br>
+                        By <u>clicking</u> on the cell you can change the below 2 plots, to get a better feel of how the attributes are correlated.<br><br>
+                        By <u>hovering</u> over the cells we can see the correlation value between the attributes.<br><br>
+                        Positive correlation are in green, while negative correlation are in blue.
                     </p>
                 </div>
             </div>
@@ -77,10 +82,13 @@
                 </div>
             </div>
         </div>
+        <div id="airbnb-logo-container">
+            <img src="airbnb_logo.png" id="airbnb-logo">
+        </div>
         <script src="js/histogram.js"></script>
-
         <script src="js/scatterplot.js"></script>
-        <script src="js/heatmap.js"></script>        
+        <script src="js/heatmap.js"></script>
+        <script src="js/maplistings.js"></script>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -89,12 +97,3 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
-<!--
-TODO:
-
-1. ADD MAP CHART MAYBE?
-2. ADD CHART DESCRIPTION.
-3. Add area for selected attributes near the correlation matrix.
-
-
--->

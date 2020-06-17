@@ -7,7 +7,7 @@ window.AirBnB = window.AirBnB || {};
 
 
 // get the data
-d3.csv("cleaned_boston_data.csv", function(data) {
+d3.csv("data/cleaned_boston_data.csv", function(data) {
     //Add to package renderer for histogram
     AirBnB.histogramRenderer = (function(){
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
@@ -116,7 +116,7 @@ d3.csv("cleaned_boston_data.csv", function(data) {
                 .call(d3.axisBottom(x))
                 .attr("transform", "translate(0," + height + ")");
             
-            
+            //Removing & Adding labels for axis.
             svg.selectAll(".x_attr_hist").remove().exit();
             svg.selectAll(".y_attr_hist").remove().exit();
             svg.append("text")
