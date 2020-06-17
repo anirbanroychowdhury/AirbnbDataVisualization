@@ -10,7 +10,7 @@ window.AirBnB = window.AirBnB || {};
 d3.csv("cleaned_boston_data.csv", function(data) {
     //Add to package renderer for histogram
     AirBnB.histogramRenderer = (function(){
-        var margin = {top: 10, right: 30, bottom: 30, left: 40},
+        var margin = {top: 10, right: 30, bottom: 30, left: 60},
             width = 460 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
 
@@ -64,6 +64,7 @@ d3.csv("cleaned_boston_data.csv", function(data) {
         //     A function that change this tooltip when the user hover a point.
         //     Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
         var showTooltip = function(d) {
+            console.log(d);
             tooltip
                 .transition()
                 .duration(100)
@@ -114,6 +115,28 @@ d3.csv("cleaned_boston_data.csv", function(data) {
                 .duration(1000)
                 .call(d3.axisBottom(x))
                 .attr("transform", "translate(0," + height + ")");
+            
+            
+            svg.selectAll(".x_attr_hist").remove().exit();
+            svg.selectAll(".y_attr_hist").remove().exit();
+            svg.append("text")
+                .attr("class","x_attr_hist")
+                .attr("transform",
+                      "translate(" + (width/2) + " ," + 
+                      (height + margin.top + 20) + ")")
+                .style("text-anchor", "middle")
+                .text(x_attr_hist)
+                .attr("fill","antiquewhite") ;
+            
+              svg.append("text")
+                .attr("class","y_attr_hist")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left)
+                .attr("x",0 - (height / 2))
+                .attr("dy", "1em")
+                .style("text-anchor", "middle")
+                .text(y_attr_hist)
+                .attr("fill","antiquewhite");   
 
 
             var u = svg.selectAll("rect").data(bins)
@@ -137,7 +160,7 @@ d3.csv("cleaned_boston_data.csv", function(data) {
         }
 
         //init call
-        update_hist(x_attr_hist,y_attr_hist,5);
+        update_hist(x_attr_hist,y_attr_hist,21);
         //change value from input bar
         d3.select("#nBin").on("input",function(){
             update_hist(x_attr_hist_temp,y_attr_hist_temp,+this.value);

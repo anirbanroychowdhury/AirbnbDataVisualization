@@ -98,6 +98,27 @@ d3.csv("cleaned_boston_data.csv", function(data) {
                     .style("opacity", 0)
             }
 
+            //Adding & Removing Labels for Axis
+            svg_scatterplot.selectAll(".x_attr_scatter").remove().exit();
+            svg_scatterplot.selectAll(".y_attr_scatter").remove().exit();
+            svg_scatterplot.append("text")
+                .attr("class","x_attr_scatter")
+                .attr("transform",
+                      "translate(" + (width/2) + " ," + 
+                      (height + margin.top + 20) + ")")
+                .style("text-anchor", "middle")
+                .text(x_attr_scatter)
+                .attr("fill","antiquewhite") ;
+
+            svg_scatterplot.append("text")
+                .attr("class","y_attr_scatter")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left)
+                .attr("x",0 - (height / 2))
+                .attr("dy", "1em")
+                .style("text-anchor", "middle")
+                .text(y_attr_scatter)
+                .attr("fill","antiquewhite");   
             //remove and add new data.
             svg_scatterplot.selectAll(".scatter-circle").remove().exit()
                 .data(data)
