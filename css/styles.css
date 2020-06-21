@@ -71,3 +71,8 @@ svg {
   margin-right: auto;
   width: 50%;
 }
+
+#correlation-scale {
+    height: 30px;
+    width: 75%;
+}

@@ -11,14 +11,15 @@
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
 
-        <title>Airbnb Visualization - Anirban Roy Chowdhury - 30539676</title>
+        <title>Airbnb Visualization</title>
+<!--        Loading geoJson-->
         <script src="data/geoJSON.json"></script>
         <script src="data/listing.json"></script>
     </head>
     <body id="body">
         <div class="container">
             <nav class="navbar navbar-dark bg-dark sticky-top">
-                <a class="navbar-brand" href="#">Airbnb Visualization - Anirban Roy Chowdhury - 30539676</a>
+                <a class="navbar-brand" href="#">Airbnb</a>
             </nav>
         </div>
         <h1>Airbnb Visualization - Price Exploration</h1>
@@ -46,7 +47,10 @@
         </div>
         <div id="graphs">
             <div id="correlation-matrix">
-                <div id="heatmap"></div>
+                <div id="heatmap">
+                    
+                </div>
+
                 <div>
                     <h2>
                         Correlation Matrix
@@ -57,7 +61,9 @@
                         By <u>hovering</u> over the cells we can see the correlation value between the attributes.<br><br>
                         Positive correlation are in green, while negative correlation are in blue.
                     </p>
+                    <img id="correlation-scale" src="cool.png">
                 </div>
+                
             </div>
             <div id="numerical-graph">
                 <div id="scatterplot"></div>

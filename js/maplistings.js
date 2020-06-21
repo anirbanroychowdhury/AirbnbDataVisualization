@@ -27,13 +27,13 @@ var width = 700;
         .attr( "stroke", "#333")
         .attr( "d", geoPath );
 
-var rodents = svg.append( "g" );
+var listings = svg.append( "g" );
 
-rodents.selectAll( "path" )
+listings.selectAll( "path" )
 	.data( listings_json.features )
 	.enter()
 	.append( "path" )
-	.attr( "fill", "#900" )
-	.attr( "stroke", "#999" )
+	.attr( "fill", "#69b3a2" )
+	.attr( "stroke", "black" )
 	.attr( "d", geoPath );
 }());
