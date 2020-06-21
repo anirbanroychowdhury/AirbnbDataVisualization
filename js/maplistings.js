@@ -33,7 +33,7 @@ listings.selectAll( "path" )
 	.data( listings_json.features )
 	.enter()
 	.append( "path" )
-	.attr( "fill", "#69b3a2" )
+	.attr( "fill", "#fc5203" )
 	.attr( "stroke", "black" )
 	.attr( "d", geoPath );
 }());
